@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewSonuc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="228dp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/black"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextBirinci"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="204dp"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:inputType="numberSigned|textPersonName"
+        android:text="Birinci Sayıyı Giriniz"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="19sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextİkinci"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:inputType="numberSigned|textPersonName"
+        android:text="İkinci Sayıyı Giriniz"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="19sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextBirinci" />
+
+    <Button
+        android:id="@+id/buttonToplama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:onClick="btnHesapla"
+        android:text="+"
+        app:backgroundTint="@color/purple_200"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonEksi"
+        app:layout_constraintEnd_toStartOf="@+id/buttonEksi"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonEksi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:onClick="btnHesapla"
+        android:text="-"
+        app:backgroundTint="@android:color/holo_orange_light"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonCarp"
+        app:layout_constraintEnd_toStartOf="@+id/buttonCarp"
+        app:layout_constraintStart_toEndOf="@+id/buttonToplama" />
+
+    <Button
+        android:id="@+id/buttonCarp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+        android:onClick="btnHesapla"
+        android:text="*"
+        app:backgroundTint="@android:color/holo_blue_light"
+        app:layout_constraintEnd_toStartOf="@+id/buttonBolme"
+        app:layout_constraintStart_toEndOf="@+id/buttonEksi"
+        app:layout_constraintTop_toBottomOf="@+id/editTextİkinci" />
+
+    <Button
+        android:id="@+id/buttonBolme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="9dp"
+        android:layout_marginRight="9dp"
+        android:onClick="btnHesapla"
+        android:text="/"
+        app:backgroundTint="@android:color/holo_green_light"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonCarp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonCarp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
